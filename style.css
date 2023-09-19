@@ -1,10 +1,27 @@
 .everything {
     display: flex;
-    flex-direction: row, column;
+    flex-direction: wrap;
     align-items: center;
     justify-content: center;
 }
+.topbar{
+    max-width:80%;
+    align-content: center;
+    margin: 10px;
+    background-color: black;
+    color: white;
+}
+.top{
+    align-items:left;
+    margin: 10px;
 
+}
+.topbar:sticky{
+    position:sticky
+    -webkit-sticky;
+
+
+}
 .body{
     background-color: aliceblue;
     box-sizing: border-box;
@@ -34,7 +51,7 @@
 }
 
 .imgbox:hover{
-    border-bottom-left-radius: 150px;
+    width:150px;
     height:150px;
     align-items: center;
     max-width: 150px;
