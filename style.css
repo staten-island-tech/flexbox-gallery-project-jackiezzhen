@@ -1,0 +1,25 @@
+.e {
+    display: flex;
+    flex-direction: row, column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.body{
+    background-color: aliceblue;
+}
+
+.imgbox{
+    background-color: azure;
+    border-width: 20px;
+    border-top: 10px;
+    border-bottom: 10px;
+    margin: 10px;
+    text-align:center
+    transition: 1s;
+
+}
+img:hover{
+
+
+}
