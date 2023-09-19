@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row, column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .body{
@@ -16,23 +16,33 @@
 
 .imgbox{
     border-radius: 10px;
+    border-style: solid;
+    border-color: rgba(255,0,0,100);
+
+
     margin: 10px;
-    border-color: black;
     height: 100px;
     width: 100px;
-    background-color: rgb(68, 161, 255);
-    border-bottom: 10px;
-    align-items: center;
-    transition: 1s;
     padding:10px;
+    background-color: rgb(68, 161, 255);
+    align-items: center;
+    text-align: center;
+
+    transition: 1s;
+    overflow:hidden;
+    display:block;
 }
 
 .imgbox:hover{
     width:150px;
     height:150px;
+    align-items: center;
+    max-width: 150px;
 
 }
 
 .explain {
     font-size: 1rem;
+    align-items:center;
+    max-width: 100px;
 }
