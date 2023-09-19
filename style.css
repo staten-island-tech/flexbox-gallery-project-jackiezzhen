@@ -7,19 +7,32 @@
 
 .body{
     background-color: aliceblue;
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    align-items:center;
+
 }
 
 .imgbox{
-    background-color: azure;
-    border-width: 20px;
-    border-top: 10px;
-    border-bottom: 10px;
+    border-radius: 10px;
     margin: 10px;
-    text-align:center
+    border-color: black;
+    height: 100px;
+    width: 100px;
+    background-color: rgb(68, 161, 255);
+    border-bottom: 10px;
+    align-items: center;
     transition: 1s;
+    padding:10px;
+}
+
+.imgbox:hover{
+    width:150px;
+    height:150px;
 
 }
-img:hover{
 
-
+.explain {
+    font-size: 1rem;
 }
