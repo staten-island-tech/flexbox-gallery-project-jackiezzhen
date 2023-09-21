@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
 /* Base Styles */
 .everything {
     display: flex;
@@ -5,12 +7,10 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-     
-    font-family: "Noto Sans Korean", sans-serif;
+    font-family: "Noto Sans", sans-serif;
 }
 
 .body {
-    <link rel="stylesheet" href="https://fonts.google.com/noto/specimen/Noto+Sans+KR/about?preview.text=The%20game%20is%20set%20in%20a%20science-fantasy%20universe%20in%20which%20humanity%20and%20other%20sentient%20beings%20follows%20the%20paths%20of%20beings%20called%20Aeons.%20The%20player%20character,%20the%20Trailblazer,%20whose%20name%20and%20gender%20are%20chosen%20by%20the%20player,%20awakens%20without%20their%20memory%20aboard%20a%20space%20station%20and%20discovers%20that%20they%20are%20imbued%20with%20a%20Stellaron,%20a%20disruptive%20cosmic%20entity.%20They%20join%20a%20band%20of%20adventurers,%20the%20Trailblazers,%20traveling%20from%20world%20to%20world%20aboard%20the%20Astral%20Express,%20their%20space%20train.&preview.text_type=custom">
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -139,7 +139,8 @@
 
 /* Explain */
 .explain {
-    font-size: auto;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px auto;
     text-align: center;
     position: absolute;
     left: 0;
@@ -157,13 +158,12 @@
     left: 0;
     right: 0;
 }
-#box1:active .explain{bottom:5%}
-#box2:active .explain{bottom:-5%}
-#box3:active .explain{bottom:5%}
-#box4:active .explain{bottom:5%}
-#box5:active .explain{bottom:5%}
-#box6:active .explain{bottom:5%}
-#box7:active .explain{bottom:5%}
-#box8:active .explain{bottom:5%}
-#box9:active .explain{bottom:5%}
-
+#box1:active .explain{bottom:0}
+#box2:active .explain{bottom:0}
+#box3:active .explain{bottom:0}
+#box4:active .explain{bottom:0}
+#box5:active .explain{bottom:0}
+#box6:active .explain{bottom:0}
+#box7:active .explain{bottom:0}
+#box8:active .explain{bottom:0}
+#box9:active .explain{bottom:0}
