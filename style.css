@@ -1,73 +1,72 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
 /* Base Styles */
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    font-family: "Noto Sans", sans-serif;
-}
-
-.body,
+body,
 html {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    align-items: center;
+}
 
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin:auto;
 }
 
 /* Sticky Top Bar */
 .topbar {
-    position: sticky;
+    position: absolute;
     top: 0;
-    max-width: 100%;
-    align-content: center;
     background-color: black;
     color: white;
     height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    margin: auto;
+    left: 5%;
+    right: 5%;
+    z-index: 1;
+}
+.top {
+    padding: 4px;
 }
 
-.top {
-    margin: 20px;
-    text-align: left;
-    line-height: 50px;
+.center-text {
+    font-size: 14px;
 }
+
+
 
 /* Background Video (Needs Fixing) */
 .video {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     width: 100%;
-    margin: auto;
     height: auto;
     object-fit: fill;
     position: absolute;
     z-index: -1;
-    size: cover;
-    position: center;
 }
 
 /* 3x3 boxes */
 .imgbox {
     position: relative;
     border-radius: 10px;
-    border-style: solid;
-    border-color: rgba(255, 255, 255, 100);
-    margin: 100px;
-    height: 100px;
-    width: 100px;
-    padding: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    top: 70px;
+    margin: 55px;
+    width: 120px;
+    height: 120px;
+    padding: 6px;
     background-color: rgb(68, 161, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    text-align: center;
-    transition: 1s;
+    transition: width 0.8s, height 0.8s, box-shadow 0.8s;
     overflow: hidden;
-    display: inline-block;
     opacity: 1;
 }
 
@@ -75,8 +74,6 @@ html {
 .imgbox:hover {
     width: 250px;
     height: 250px;
-    align-items: center;
-    height: auto;
     box-shadow: 0px 4px 8px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -84,24 +81,20 @@ html {
 .imgbox:active {
     width: 400px;
     height: 400px;
-    align-items: center;
     max-width: 100%;
     box-shadow: 0px 4px 8px 5px rgba(0, 0, 0, 0.2);
 }
-
 
 /* Hide Cover and Show Gallery */
 .imgbox .cover {
     max-width: 100%;
     height: auto;
     opacity: 1;
-    /* Ensure the cover is initially visible */
-    transition: 1s;
+    transition: 0.8s ease-out;
 }
 
 .imgbox:active .cover {
     opacity: 0;
-    /* Hide the cover when imgbox is active */
     max-width: 0;
     padding: 0;
     width: 0;
@@ -111,11 +104,11 @@ html {
 .gallery {
     position: absolute;
     max-width: 100%;
-    height: auto;
+    top: 0;
     opacity: 0;
-    transition: 1s;
+    transition: 0.5s;
     left: 0;
-    /* Position the gallery at the left */
+    right: 0;
 }
 
 .imgbox:active .gallery {
@@ -133,15 +126,13 @@ html {
     background: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 10px;
-    transition: 1s;
+    transition: 0.5s;
     opacity: 0;
     z-index: 1;
-    /* Ensure the name appears above other content */
 }
 
 .imgbox:hover .name {
     opacity: 1;
-    bottom: 0;
 }
 
 .imgbox:active .name {
@@ -150,56 +141,58 @@ html {
 
 /* Explain */
 .explain {
-    text-align: center;
+    width: 400px;
     position: absolute;
+    opacity: 0; /* Set opacity to 1 by default */
+}
+
+.imgbox:active .explain {
+    align-items: center;
+    text-align: center;
     left: 0;
     right: 0;
     color: black;
     padding: 10px;
-    transition: 0.5s;
-    opacity: 0;
     z-index: 1;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.imgbox:active .explain {
+    font-family: "Noto Sans", sans-serif;
+    display: flex;
+    width: 400px;
     opacity: 1;
-    left: 0;
-    right: 0;
+     
 }
 
 #box1:active .explain {
-    bottom: 0; font-size:12px;
+    bottom: 5%; font-size:14px;
 }
 
 #box2:active .explain {
-    bottom: -20px; font-size:12px;
+    bottom: -1%; font-size:13px;
 }
 
 #box3:active .explain {
-    bottom: 10%; font-size:12px;
+    bottom: 15%; font-size:14px;
 }
 
 #box4:active .explain {
-    bottom: 0; font-size:12px;
+    bottom: 2%; font-size:12px;
 }
 
 #box5:active .explain {
-    bottom: 0; font-size:12px;
+    bottom: 2%; font-size:13px;
 }
 
 #box6:active .explain {
-    bottom: 0; font-size:12px;
+    bottom: -3%; font-size:12px;
 }
 
 #box7:active .explain {
-    bottom: 0; font-size:12px;
+    bottom: -1.5%; font-size:12px;
 }
 
 #box8:active .explain {
-    bottom: 0; font-size:12px;
+    bottom: 6%; font-size:13px;
 }
 
 #box9:active .explain {
-    bottom: 0; font-size:12px;
+    bottom: 9%; font-size:14px;
 }
